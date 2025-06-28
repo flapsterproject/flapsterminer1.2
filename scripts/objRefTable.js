@@ -17,6 +17,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Behaviors.Sin,
 		C3.Behaviors.bound,
 		C3.Behaviors.scrollto,
+		C3.Plugins.EMI_INDO_LogMessage,
 		C3.Plugins.System.Cnds.OnLayoutStart,
 		C3.Plugins.PlatformInfo.Cnds.IsOnWindows,
 		C3.Plugins.Browser.Acts.SetWindowSize,
@@ -26,7 +27,9 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Browser.Cnds.OnResize,
 		C3.Plugins.Touch.Cnds.OnTouchObject,
 		C3.Plugins.System.Cnds.CompareVar,
+		C3.Plugins.Eponesh_GameScore.Cnds.IsAdsFullscreenAvailable,
 		C3.Plugins.Eponesh_GameScore.Acts.AdsShowRewarded,
+		C3.Plugins.EMI_INDO_LogMessage.Acts.logMessage,
 		C3.Plugins.System.Acts.SubVar,
 		C3.Plugins.System.Acts.AddVar,
 		C3.Plugins.System.Acts.Wait,
@@ -179,6 +182,7 @@ self.C3_JsPropNameTable = [
 	{BoundToLayout: 0},
 	{ScrollTo: 0},
 	{scroll: 0},
+	{LogMessage: 0},
 	{mine_section: 0},
 	{manat: 0},
 	{click: 0},
@@ -271,5 +275,6 @@ self.InstanceType = {
 	b2: class extends self.ISpriteInstance {},
 	mineinfo2: class extends self.ITextInstance {},
 	mineinfo3: class extends self.ITextInstance {},
-	scroll: class extends self.ISpriteInstance {}
+	scroll: class extends self.ISpriteInstance {},
+	LogMessage: class extends C3.Plugins.EMI_INDO_LogMessage.Instance {}
 }
