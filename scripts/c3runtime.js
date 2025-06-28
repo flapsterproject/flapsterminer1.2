@@ -1301,18 +1301,19 @@ self.C3_ExpressionFuncs = [
 		() => 0.0000061875,
 		() => 3,
 		() => 0.00000825,
+		() => 4,
+		() => 0.00001,
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			return () => and(v0.GetValue(), "s");
 		},
 		() => "Start mining",
 		() => "10k",
-		() => 4,
+		() => 5,
 		p => {
 			const n0 = p._GetNode(0);
 			return () => n0.ExpObject();
 		},
-		() => 5,
 		() => "idle",
 		() => "coin",
 		() => "selected",
@@ -1357,6 +1358,7 @@ self.C3_ExpressionFuncs = [
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => and("ID:", f0());
 		},
+		() => 7,
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0("usdt");
@@ -1373,6 +1375,10 @@ self.C3_ExpressionFuncs = [
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0("emerald-pickaxe");
 		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("diamond-pickaxe");
+		},
 		() => 180,
 		() => 0.5,
 		() => "energy1:max",
@@ -1383,16 +1389,22 @@ self.C3_ExpressionFuncs = [
 		() => 428,
 		() => 646,
 		() => "Selected",
+		() => 16777215,
 		() => "Select",
+		() => 150,
+		() => 300,
 		() => "50k",
 		() => "100k",
 		() => "250k",
+		() => "250",
 		() => 50000,
 		() => "golden-pickaxe",
 		() => 100000,
 		() => "crimson-pickaxe",
 		() => 250000,
 		() => "emerald-pickaxe",
+		() => 11526,
+		() => "diamond-pickaxe",
 		p => {
 			const n0 = p._GetNode(0);
 			const n1 = p._GetNode(1);
@@ -1415,7 +1427,10 @@ self.C3_ExpressionFuncs = [
 			const n0 = p._GetNode(0);
 			const n1 = p._GetNode(1);
 			return () => (n0.ExpInstVar() - n1.ExpInstVar());
-		}
+		},
+		() => "Not available!",
+		() => "orange",
+		() => 1000
 ];
 
 
