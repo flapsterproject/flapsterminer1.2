@@ -76,6 +76,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Browser.Acts.GoToURL,
 		C3.Plugins.Sprite.Cnds.OnCollision,
 		C3.Plugins.Text.Acts.SetFontColor,
+		C3.Plugins.Eponesh_GameScore.Acts.PaymentsConsume,
+		C3.Plugins.Eponesh_GameScore.Cnds.OnPaymentsConsume,
 		C3.Plugins.Eponesh_GameScore.Acts.PaymentsPurchase,
 		C3.Plugins.Eponesh_GameScore.Cnds.PaymentsIsPurchased,
 		C3.Plugins.Eponesh_GameScore.Cnds.IsPaymentsPurchaseSuccessful,
