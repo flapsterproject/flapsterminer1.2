@@ -1403,7 +1403,6 @@ self.C3_ExpressionFuncs = [
 		() => "crimson-pickaxe",
 		() => 250000,
 		() => "emerald-pickaxe",
-		() => 11526,
 		() => "diamond-pickaxe",
 		p => {
 			const n0 = p._GetNode(0);
