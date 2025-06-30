@@ -1281,7 +1281,7 @@ self.C3_ExpressionFuncs = [
 		() => 720,
 		() => 0,
 		() => "rewarded_ads",
-		() => "Mining is not available!",
+		() => "Magdan elýeterli däl!",
 		() => "red",
 		() => 5000,
 		() => 10000,
@@ -1291,10 +1291,11 @@ self.C3_ExpressionFuncs = [
 			const v0 = p._GetNode(0).GetVar();
 			return () => v0.GetValue();
 		},
-		() => "Mining started⛏️",
+		() => "Gazuw başlandy⛏️",
 		() => "green",
 		() => 2000,
 		() => 1,
+		() => "gazuw",
 		() => 0.00000275,
 		() => 0.000004125,
 		() => 2,
@@ -1307,22 +1308,34 @@ self.C3_ExpressionFuncs = [
 			const v0 = p._GetNode(0).GetVar();
 			return () => and(v0.GetValue(), "s");
 		},
-		() => "Start mining",
-		() => "10k",
+		() => "Gazuwa başla!",
+		() => " 10 müň",
 		() => 5,
+		() => "coin",
+		() => "Ýakynda!",
+		() => "orange",
+		() => 1000,
 		p => {
 			const n0 = p._GetNode(0);
 			return () => n0.ExpObject();
 		},
 		() => "idle",
-		() => "coin",
+		() => 1000000,
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => and((v0.GetValue() / 1000), "müň");
+		},
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => and((v0.GetValue() / 1000000), "mln");
+		},
 		() => "selected",
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0();
 		},
 		() => "reward_x2",
-		() => "X2 to per click",
+		() => "X2 Her basyşa",
 		() => 100,
 		p => {
 			const v0 = p._GetNode(0).GetVar();
@@ -1348,6 +1361,7 @@ self.C3_ExpressionFuncs = [
 			return () => f0("energy1");
 		},
 		() => -25,
+		() => 10,
 		() => "energy1",
 		() => -1,
 		p => {
@@ -1362,6 +1376,18 @@ self.C3_ExpressionFuncs = [
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0("usdt");
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("tmt");
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("coin");
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("gazuw");
 		},
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
@@ -1384,26 +1410,36 @@ self.C3_ExpressionFuncs = [
 		() => "energy1:max",
 		() => 25,
 		() => 50,
-		() => 250,
+		() => 150,
+		() => 300,
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => and(v0.GetValue(), "TMT");
+		},
 		() => "https://t.me/amangeldimasakov",
 		() => 428,
 		() => 646,
+		() => "",
 		() => "Selected",
 		() => 16777215,
 		() => "Select",
-		() => 150,
-		() => 300,
 		() => "50k",
 		() => "100k",
 		() => "250k",
-		() => "250",
+		() => "50 TMT",
 		() => 50000,
 		() => "golden-pickaxe",
+		() => "Altyn Kirka✅",
+		() => "Balansyňyz ýetenok!",
 		() => 100000,
 		() => "crimson-pickaxe",
+		() => "Gyzyl Kirka✅",
 		() => 250000,
 		() => "emerald-pickaxe",
+		() => "Izumrud Kirka✅",
+		() => "tmt",
 		() => "diamond-pickaxe",
+		() => "Almaz Kirka✅",
 		p => {
 			const n0 = p._GetNode(0);
 			const n1 = p._GetNode(1);
@@ -1427,9 +1463,7 @@ self.C3_ExpressionFuncs = [
 			const n1 = p._GetNode(1);
 			return () => (n0.ExpInstVar() - n1.ExpInstVar());
 		},
-		() => "Not available!",
-		() => "orange",
-		() => 1000
+		() => "Elýeterli däl!"
 ];
 
 
