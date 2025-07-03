@@ -79,6 +79,9 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Cnds.OnCollision,
 		C3.Plugins.Eponesh_GameScore.Acts.LeaderboardOpen,
 		C3.Plugins.Text.Acts.SetFontColor,
+		C3.Plugins.Eponesh_GameScore.Acts.PaymentsPurchase,
+		C3.Plugins.Eponesh_GameScore.Cnds.OnPaymentsPurchase,
+		C3.Plugins.Eponesh_GameScore.Cnds.PaymentsIsPurchased,
 		C3.Plugins.Sprite.Acts.SetY,
 		C3.Plugins.Sprite.Exps.Y,
 		C3.Plugins.Sprite.Acts.SubInstanceVar,
@@ -201,6 +204,8 @@ self.C3_JsPropNameTable = [
 	{add_: 0},
 	{ChatGPTImageJun30202501_41_05AM: 0},
 	{trophy_: 0},
+	{file_: 0},
+	{taskexit: 0},
 	{mine_section: 0},
 	{gazuw: 0},
 	{manat: 0},
@@ -313,5 +318,7 @@ self.InstanceType = {
 	bank_: class extends self.ISpriteInstance {},
 	add_: class extends self.ISpriteInstance {},
 	ChatGPTImageJun30202501_41_05AM: class extends self.ISpriteInstance {},
-	trophy_: class extends self.ISpriteInstance {}
+	trophy_: class extends self.ISpriteInstance {},
+	file_: class extends self.ISpriteInstance {},
+	taskexit: class extends self.ISpriteInstance {}
 }
