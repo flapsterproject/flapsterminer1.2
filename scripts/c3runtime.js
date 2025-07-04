@@ -1313,6 +1313,10 @@ self.C3_ExpressionFuncs = [
 		() => "Start mining!",
 		() => " 10k",
 		() => 5,
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("coin");
+		},
 		() => "Soon!",
 		() => "orange",
 		() => 1000,
@@ -1321,6 +1325,10 @@ self.C3_ExpressionFuncs = [
 			return () => n0.ExpObject();
 		},
 		() => "idle",
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0();
+		},
 		() => 1000000,
 		p => {
 			const v0 = p._GetNode(0).GetVar();
@@ -1331,10 +1339,6 @@ self.C3_ExpressionFuncs = [
 			return () => and((v0.GetValue() / 1000000), "mln");
 		},
 		() => "selected",
-		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => f0();
-		},
 		() => "reward_x2",
 		() => "X2 to per click",
 		() => 100,
@@ -1384,10 +1388,6 @@ self.C3_ExpressionFuncs = [
 		},
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => f0("coin");
-		},
-		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0("gazuw");
 		},
 		p => {
@@ -1416,7 +1416,6 @@ self.C3_ExpressionFuncs = [
 		() => "https://t.me/amangeldimasakov",
 		() => 428,
 		() => 646,
-		() => "",
 		() => "Selected",
 		() => 16777215,
 		() => "Select",
@@ -1459,7 +1458,29 @@ self.C3_ExpressionFuncs = [
 			const n1 = p._GetNode(1);
 			return () => (n0.ExpInstVar() - n1.ExpInstVar());
 		},
-		() => "Not available!"
+		() => "Not available!",
+		() => 413,
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => (269 + (110 * f0()));
+		},
+		() => "",
+		() => 169.052,
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => (269.542064 + (110 * f0()));
+		},
+		() => 86.346754,
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => (231.883643 + (110 * f0()));
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			const f1 = p._GetNode(1).GetBoundMethod();
+			const f2 = p._GetNode(2).GetBoundMethod();
+			return () => and(((and(f0(), ".           ") + f1()) + ": "), f2("coin"));
+		}
 ];
 
 
